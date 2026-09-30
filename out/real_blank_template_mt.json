@@ -1,0 +1,185 @@
+{
+  "source": {
+    "path": "samples/real_blank_template_mt.pdf",
+    "pages": 3,
+    "mode": "text",
+    "reason": "text layer present (1094 chars/page)"
+  },
+  "model": "claude-haiku-4-5",
+  "change_order": {
+    "co_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Chg. Order #: field present but blank on form"
+    },
+    "co_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Date: field present but blank on form"
+    },
+    "title": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "No title field completed"
+    },
+    "project_name": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Project Name: field present but blank on form"
+    },
+    "project_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "A/E #: field present but blank on form"
+    },
+    "contract_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "No contract number visible on form"
+    },
+    "contractor": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Contractor: field present but blank on form"
+    },
+    "owner": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "No owner field completed on form"
+    },
+    "architect": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Recommended by Architect/Engineer: field present but blank"
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Change In Contract Duration/Time By This Change Order: field present but blank"
+    },
+    "line_items": [],
+    "totals": {
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "SUBTOTAL (Labor & Materials) = field present but blank"
+      },
+      "tax": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "No tax line visible on form"
+      },
+      "markup_pct": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "Overhead & Profit @ ___% = field present but blank"
+      },
+      "markup": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "Overhead & Profit @ ___% = field present but blank"
+      },
+      "total": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "TOTAL COST (This Change Order Only) = field present but blank"
+      },
+      "revised_contract_sum": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "New Contract Amount (3+4) field present but blank"
+      }
+    },
+    "contractor_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Approved by Contractor: By: Date: field present but blank"
+    },
+    "owner_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Reviewed by Agency: By: Date: field present but blank"
+    },
+    "architect_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": "Recommended by Architect/Engineer: By: Date: field present but blank"
+    }
+  },
+  "flags": [
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "co_number",
+      "message": "co_number not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "co_date",
+      "message": "co_date not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "totals.total",
+      "message": "totals.total not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "warning",
+      "field": "project_name",
+      "message": "project_name not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "warning",
+      "field": "project_number",
+      "message": "project_number not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "warning",
+      "field": "contractor",
+      "message": "contractor not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "NO_LINE_ITEMS",
+      "severity": "warning",
+      "field": "line_items",
+      "message": "no line items extracted",
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "scores": {
+    "min_confidence": 0.0,
+    "min_confidence_critical": 0.0,
+    "fields_found": 0,
+    "fields_expected": 19,
+    "critical_missing": [
+      "co_date",
+      "co_number",
+      "contractor",
+      "schedule_impact_days",
+      "totals.markup",
+      "totals.subtotal",
+      "totals.total"
+    ],
+    "coverage": 0.0,
+    "coverage_critical": 0.0
+  },
+  "routing": "review"
+}

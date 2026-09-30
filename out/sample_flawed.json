@@ -1,0 +1,183 @@
+{
+  "source": {
+    "path": "samples/sample_flawed.pdf",
+    "pages": 1,
+    "mode": "text",
+    "reason": "text layer present (1128 chars/page)"
+  },
+  "model": "stub(offline)",
+  "change_order": {
+    "co_number": {
+      "value": "CO-014",
+      "confidence": 0.97,
+      "evidence": "Change Order No: CO-014"
+    },
+    "co_date": {
+      "value": "2026-03-11",
+      "confidence": 0.97,
+      "evidence": "Date: 2026-03-11"
+    },
+    "title": {
+      "value": "Rock excavation and revised footing at east elevation",
+      "confidence": 0.97,
+      "evidence": "Description: Rock excavation and revised footing at east elevation"
+    },
+    "project_name": {
+      "value": "Northgate Medical Office Building - Phase 2",
+      "confidence": 0.97,
+      "evidence": "Project: Northgate Medical Office Building - Phase 2"
+    },
+    "project_number": {
+      "value": "NG-2291",
+      "confidence": 0.97,
+      "evidence": "Project No: NG-2291"
+    },
+    "contract_number": {
+      "value": "C-4417",
+      "confidence": 0.97,
+      "evidence": "Contract No: C-4417"
+    },
+    "contractor": {
+      "value": "Bellweather Construction Group",
+      "confidence": 0.97,
+      "evidence": "Contractor: Bellweather Construction Group"
+    },
+    "owner": {
+      "value": "Northgate Property Holdings LLC",
+      "confidence": 0.97,
+      "evidence": "Owner: Northgate Property Holdings LLC"
+    },
+    "architect": {
+      "value": "Marsh & Doyle Architects",
+      "confidence": 0.97,
+      "evidence": "Architect: Marsh & Doyle Architects"
+    },
+    "schedule_impact_days": {
+      "value": 7,
+      "confidence": 0.96,
+      "evidence": "increased by 7 days"
+    },
+    "line_items": [
+      {
+        "description": "Rock excavation, east footing",
+        "quantity": 48.0,
+        "unit": "CY",
+        "unit_price": 92.5,
+        "extended_price": 4440.0,
+        "confidence": 0.97,
+        "evidence": "Rock excavation, east footing 48.00 CY 92.50 4,440.00"
+      },
+      {
+        "description": "Additional rebar, #5 bar",
+        "quantity": 1240.0,
+        "unit": "LB",
+        "unit_price": 1.35,
+        "extended_price": 1674.0,
+        "confidence": 0.97,
+        "evidence": "Additional rebar, #5 bar 1,240.00 LB 1.35 1,674.00"
+      },
+      {
+        "description": "Concrete, 4000 psi, footing",
+        "quantity": 18.5,
+        "unit": "CY",
+        "unit_price": 214.0,
+        "extended_price": 3859.0,
+        "confidence": 0.97,
+        "evidence": "Concrete, 4000 psi, footing 18.50 CY 214.00 3,859.00"
+      },
+      {
+        "description": "Crane time, mobilization",
+        "quantity": 6.0,
+        "unit": "HR",
+        "unit_price": 385.0,
+        "extended_price": 2310.0,
+        "confidence": 0.97,
+        "evidence": "Crane time, mobilization 6.00 HR 385.00 2,310.00"
+      },
+      {
+        "description": "Dewatering pump rental",
+        "quantity": 12.0,
+        "unit": "DAY",
+        "unit_price": 145.0,
+        "extended_price": 1740.0,
+        "confidence": 0.97,
+        "evidence": "Dewatering pump rental 12.00 DAY 145.00 1,740.00"
+      }
+    ],
+    "totals": {
+      "subtotal": {
+        "value": 14123.0,
+        "confidence": 0.98,
+        "evidence": "Subtotal 14,123.00"
+      },
+      "tax": {
+        "value": 0.0,
+        "confidence": 0.98,
+        "evidence": "Sales tax 0.00"
+      },
+      "markup_pct": {
+        "value": 10.0,
+        "confidence": 0.95,
+        "evidence": "Overhead & profit (10%)"
+      },
+      "markup": {
+        "value": 1412.3,
+        "confidence": 0.98,
+        "evidence": "Overhead & profit (10%) 1,412.30"
+      },
+      "total": {
+        "value": 15535.3,
+        "confidence": 0.98,
+        "evidence": "TOTAL THIS CHANGE ORDER15,535.30"
+      },
+      "revised_contract_sum": {
+        "value": 8428135.3,
+        "confidence": 0.98,
+        "evidence": "Revised Contract Sum: 8,428,135.30"
+      }
+    },
+    "contractor_signed_date": {
+      "value": "2026-03-12",
+      "confidence": 0.9,
+      "evidence": "Contractor: ______________________________   Date: 2026-03-12"
+    },
+    "owner_signed_date": {
+      "value": "2026-03-16",
+      "confidence": 0.9,
+      "evidence": "Owner: ______________________________   Date: 2026-03-16"
+    },
+    "architect_signed_date": {
+      "value": "2026-03-13",
+      "confidence": 0.9,
+      "evidence": "Architect: ______________________________   Date: 2026-03-13"
+    }
+  },
+  "flags": [
+    {
+      "code": "ROW_EXTENDED_MISMATCH",
+      "severity": "error",
+      "field": "line_items[2].extended_price",
+      "message": "18.5 x 214.0 is 3959.0, page says 3859.0",
+      "expected": 3959.0,
+      "actual": 3859.0
+    },
+    {
+      "code": "SUBTOTAL_MISMATCH",
+      "severity": "error",
+      "field": "totals.subtotal",
+      "message": "line items sum to 14023.0, page says 14123.0",
+      "expected": 14023.0,
+      "actual": 14123.0
+    }
+  ],
+  "scores": {
+    "min_confidence": 0.9,
+    "min_confidence_critical": 0.96,
+    "fields_found": 19,
+    "fields_expected": 19,
+    "critical_missing": [],
+    "coverage": 1.0,
+    "coverage_critical": 1.0
+  },
+  "routing": "review"
+}

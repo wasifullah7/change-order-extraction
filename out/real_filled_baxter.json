@@ -1,0 +1,158 @@
+{
+  "source": {
+    "path": "samples/real_filled_baxter.pdf",
+    "pages": 3,
+    "mode": "text",
+    "reason": "text layer present (2704 chars/page)"
+  },
+  "model": "claude-haiku-4-5",
+  "change_order": {
+    "co_number": {
+      "value": "3",
+      "confidence": 0.95,
+      "evidence": "Change Order No. 3"
+    },
+    "co_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "title": {
+      "value": "2025 Design Road & TH 371 Stormwater Improvements Project",
+      "confidence": 0.9,
+      "evidence": "2025 Design Road & TH 371 Stormwater Improvements Project"
+    },
+    "project_name": {
+      "value": "2025 Design Road & TH 371 Stormwater Improvements Project",
+      "confidence": 0.95,
+      "evidence": "2025 Design Road & TH 371 Stormwater Improvements Project, Municipal Project Number 4135"
+    },
+    "project_number": {
+      "value": "4135",
+      "confidence": 0.95,
+      "evidence": "Municipal Project Number 4135"
+    },
+    "contract_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "contractor": {
+      "value": "J.R. Ferche, Inc",
+      "confidence": 0.95,
+      "evidence": "the J.R. Ferche, Inc Change Order No. 3"
+    },
+    "owner": {
+      "value": "City",
+      "confidence": 0.85,
+      "evidence": "the City Council awarded the project"
+    },
+    "architect": {
+      "value": "Widseth",
+      "confidence": 0.85,
+      "evidence": "Widseth worked with the contractor to reset the elevation of the pipe"
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "line_items": [],
+    "totals": {
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "tax": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "markup_pct": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "markup": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "total": {
+        "value": 238065.24,
+        "confidence": 0.95,
+        "evidence": "Change Order No. 3 in the Increased Amount of $238,065.24"
+      },
+      "revised_contract_sum": {
+        "value": 2847946.64,
+        "confidence": 0.95,
+        "evidence": "The $238,065.24 change order increases the total contract price from $2,609,881.40 to $2,847,946.64"
+      }
+    },
+    "contractor_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "owner_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "architect_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    }
+  },
+  "flags": [
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "co_date",
+      "message": "co_date not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "NO_LINE_ITEMS",
+      "severity": "warning",
+      "field": "line_items",
+      "message": "no line items extracted",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "LOW_CONFIDENCE_FIELD",
+      "severity": "info",
+      "field": "owner",
+      "message": "read at 0.85, below the 0.9 bar but not a critical field",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "LOW_CONFIDENCE_FIELD",
+      "severity": "info",
+      "field": "architect",
+      "message": "read at 0.85, below the 0.9 bar but not a critical field",
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "scores": {
+    "min_confidence": 0.85,
+    "min_confidence_critical": 0.95,
+    "fields_found": 9,
+    "fields_expected": 19,
+    "critical_missing": [
+      "co_date",
+      "schedule_impact_days",
+      "totals.markup",
+      "totals.subtotal"
+    ],
+    "coverage": 0.474,
+    "coverage_critical": 0.429
+  },
+  "routing": "review"
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+samples/real_*.pdf
+.pytest_cache/

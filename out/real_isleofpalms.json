@@ -1,0 +1,158 @@
+{
+  "source": {
+    "path": "samples/real_filled_isleofpalms.pdf",
+    "pages": 2,
+    "mode": "text",
+    "reason": "text layer present (4940 chars/page)"
+  },
+  "model": "claude-haiku-4-5",
+  "change_order": {
+    "co_number": {
+      "value": "2",
+      "confidence": 0.95,
+      "evidence": "Change Order Number: 2"
+    },
+    "co_date": {
+      "value": "TBD",
+      "confidence": 0.95,
+      "evidence": "Date Issued: TBD"
+    },
+    "title": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "project_name": {
+      "value": "Waterway Blvd. Pathway Construction",
+      "confidence": 0.95,
+      "evidence": "Project: Waterway Blvd. Pathway Construction"
+    },
+    "project_number": {
+      "value": "27670.0010",
+      "confidence": 0.95,
+      "evidence": "Engineer's Project Number: 27670.0010"
+    },
+    "contract_number": {
+      "value": "Contract I",
+      "confidence": 0.95,
+      "evidence": "Contract: Contract I"
+    },
+    "contractor": {
+      "value": "The Bastion Group, LLC",
+      "confidence": 0.95,
+      "evidence": "Contractor: The Bastion Group, LLC"
+    },
+    "owner": {
+      "value": "City of Isle of Palms",
+      "confidence": 0.95,
+      "evidence": "Owner: City of Isle of Palms"
+    },
+    "architect": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "schedule_impact_days": {
+      "value": 0,
+      "confidence": 0.95,
+      "evidence": "The Contract Time will be (increased) (decreased) (unchanged) by (0 ) days"
+    },
+    "line_items": [
+      {
+        "description": "Add 3 water line offsets to the construction cost (previously shown on the plans) and adjust various unit cost",
+        "quantity": null,
+        "unit": null,
+        "unit_price": null,
+        "extended_price": null,
+        "confidence": 0.85,
+        "evidence": "Add 3 water line offsets to the construction cost (previously shown on the plans) and adjust various unit cost as show on the attached spreadsheet."
+      }
+    ],
+    "totals": {
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "tax": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "markup_pct": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "markup": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "total": {
+        "value": 151337.5,
+        "confidence": 0.95,
+        "evidence": "The new Contract Amount will be (increased) (decreased) (unchanged) by this Change Order in the amount of ............................................................. $ 151,337.50"
+      },
+      "revised_contract_sum": {
+        "value": 2992256.5,
+        "confidence": 0.95,
+        "evidence": "The new Contract Amount including this Change Order will be .......................... $ 2,992,256.50"
+      }
+    },
+    "contractor_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "owner_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "architect_signed_date": {
+      "value": "06/26/2026",
+      "confidence": 0.85,
+      "evidence": "Richard Karkowski, PE, PH, D.WRE 06/26/2026"
+    }
+  },
+  "flags": [
+    {
+      "code": "BAD_DATE",
+      "severity": "warning",
+      "field": "co_date",
+      "message": "'TBD' is not an ISO date",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "BAD_DATE",
+      "severity": "warning",
+      "field": "architect_signed_date",
+      "message": "'06/26/2026' is not an ISO date",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "LOW_CONFIDENCE_FIELD",
+      "severity": "info",
+      "field": "architect_signed_date",
+      "message": "read at 0.85, below the 0.9 bar but not a critical field",
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "scores": {
+    "min_confidence": 0.85,
+    "min_confidence_critical": 0.95,
+    "fields_found": 11,
+    "fields_expected": 19,
+    "critical_missing": [
+      "totals.markup",
+      "totals.subtotal"
+    ],
+    "coverage": 0.579,
+    "coverage_critical": 0.714
+  },
+  "routing": "review"
+}

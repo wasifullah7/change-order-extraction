@@ -1,0 +1,36 @@
+[project]
+name = "co-extract"
+version = "0.1.0"
+description = "Change-order extraction pipeline with per-field confidence and arithmetic validation"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.69",
+    "pydantic>=2.9",
+    "pypdfium2>=4.30",
+    "pillow>=10.4",
+    "python-dotenv>=1.2.3",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "python-multipart>=0.0.9",
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+co-extract = "co_extract.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "reportlab>=4.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

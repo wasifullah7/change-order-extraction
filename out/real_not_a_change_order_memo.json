@@ -1,0 +1,185 @@
+{
+  "source": {
+    "path": "samples/real_filled_scwd.pdf",
+    "pages": 11,
+    "mode": "text",
+    "reason": "text layer present (2489 chars/page)"
+  },
+  "model": "claude-haiku-4-5",
+  "change_order": {
+    "co_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "co_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "title": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "project_name": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "project_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "contract_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "contractor": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "owner": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "architect": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "line_items": [],
+    "totals": {
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "tax": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "markup_pct": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "markup": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "total": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "revised_contract_sum": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": ""
+      }
+    },
+    "contractor_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "owner_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    },
+    "architect_signed_date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": ""
+    }
+  },
+  "flags": [
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "co_number",
+      "message": "co_number not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "co_date",
+      "message": "co_date not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "error",
+      "field": "totals.total",
+      "message": "totals.total not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "warning",
+      "field": "project_name",
+      "message": "project_name not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "warning",
+      "field": "project_number",
+      "message": "project_number not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "MISSING_FIELD",
+      "severity": "warning",
+      "field": "contractor",
+      "message": "contractor not found on the document",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "code": "NO_LINE_ITEMS",
+      "severity": "warning",
+      "field": "line_items",
+      "message": "no line items extracted",
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "scores": {
+    "min_confidence": 0.0,
+    "min_confidence_critical": 0.0,
+    "fields_found": 0,
+    "fields_expected": 19,
+    "critical_missing": [
+      "co_date",
+      "co_number",
+      "contractor",
+      "schedule_impact_days",
+      "totals.markup",
+      "totals.subtotal",
+      "totals.total"
+    ],
+    "coverage": 0.0,
+    "coverage_critical": 0.0
+  },
+  "routing": "review"
+}
